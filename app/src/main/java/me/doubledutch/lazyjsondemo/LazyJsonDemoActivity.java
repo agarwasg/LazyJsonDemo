@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -40,7 +39,7 @@ public class LazyJsonDemoActivity extends AppCompatActivity {
         startTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                parseWithLazyJson();
+                parseTest();
                 startTestButton.setAlpha(0.5f);
                 startTestButton.setClickable(false);
 
@@ -50,7 +49,7 @@ public class LazyJsonDemoActivity extends AppCompatActivity {
     }
 
 
-    private void parseWithLazyJson() {
+    private void parseTest() {
         //read file
         parseTextView.setText("");
         new AssetFileReadTask(FILE_NAME, this)
